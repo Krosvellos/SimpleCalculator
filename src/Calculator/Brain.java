@@ -6,7 +6,11 @@ UserInput input = new UserInput();
     public void calculate(){
 
         while (true) {
+
             input.inputNumbers();
+
+
+
             double result;
 
             switch (input.operator) {
