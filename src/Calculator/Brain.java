@@ -3,12 +3,10 @@ package Calculator;
 public class Brain {
 
 UserInput input = new UserInput();
-    public void calculate(){
+    public void calculate() {
 
-        while (true) {
-
+        while (input.continuation != 'e') try {
             input.inputNumbers();
-
 
 
             double result;
@@ -16,28 +14,33 @@ UserInput input = new UserInput();
             switch (input.operator) {
                 case '+':
                     result = input.a + input.b;
-                    System.out.println("Result: "+ result);
+                    System.out.println("Result: " + result);
                     break;
 
                 case '-':
                     result = input.a - input.b;
-                    System.out.println("Result: "+ result);
+                    System.out.println("Result: " + result);
                     break;
 
                 case '*':
                     result = input.a * input.b;
-                    System.out.println("Result: "+ result);
+                    System.out.println("Result: " + result);
                     break;
 
                 case '/':
                     result = input.a / input.b;
-                    System.out.println("Result: "+result);
+                    System.out.println("Result: " + result);
+                    break;
+
+                case '%':
+                    result = input.a % input.b;
+                    System.out.println("Result: " + result);
                     break;
                 default:
                     System.out.println("Invalid operator");
             }
-
-
+        } catch (Exception e) {
+            throw new RuntimeException(e);
         }
 
     }

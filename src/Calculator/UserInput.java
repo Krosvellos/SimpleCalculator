@@ -13,14 +13,14 @@ double b;
         Scanner userInput = new Scanner(System.in);
 
         try {
-            System.out.println("Press e to exit the calculator or any other letter to continue: ");
+            System.out.println("Press e to exit the calculator or any other key to continue: ");
             continuation = userInput.next().charAt(0);
             if (continuation == 'e') {
                 System.out.println("Exiting the calculator");
-                System.exit(0);}
+                System.exit(104);}
             System.out.println("Enter the first number: ");
             a = userInput.nextDouble();
-            System.out.println("Enter the operator (+ , - , / , * ): ");
+            System.out.println("Enter the operator (+ , - , / , * , %): ");
             operator = userInput.next().charAt(0);
             System.out.println("Enter the second number: ");
             b = userInput.nextDouble();

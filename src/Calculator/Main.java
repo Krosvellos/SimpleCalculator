@@ -5,7 +5,11 @@ public class Main {
         System.out.println("This is a new calculator!");
 
             Brain calculator = new Brain();
-        calculator.calculate();
+        try {
+            calculator.calculate();
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
     }
 }
 
